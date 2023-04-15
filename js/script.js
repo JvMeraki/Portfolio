@@ -4,3 +4,4 @@ const menu = document.querySelector('nav ul');
 menuIcon.addEventListener('click', () => {
 	menu.classList.toggle('show');
 });
+
