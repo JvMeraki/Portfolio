@@ -15,7 +15,7 @@ html,body {
 }
 
 
-/* ? Navbar */
+/* ~ ////////////////////////////////////////////////////////////// Start Navbar /////////////////////////////////////////////////////////////// */
 
 nav {
     background-color: #f7f7f7;
@@ -100,8 +100,9 @@ nav .menu-icon {
         display: block;
     }
 }
+/* ~ ////////////////////////////////////////////////////////////// End Navbar /////////////////////////////////////////////////////////////// */
 
-/* ? Content */
+/* ? ///////////////////////////////////////////////////////// Start Content //////////////////////////////////////////////////////*/
 
 section.content {
     margin-top: 90px;
@@ -112,8 +113,9 @@ section.content {
     padding: 20px;
     box-sizing: border-box;
 }
+/* ? ///////////////////////////////////////////////////////// End Content //////////////////////////////////////////////////////*/
 
-/* * Galería */
+/* * ///////////////////////////////////////////////////// Start Gallery ///////////////////////////////////////////////////////// */
 section.gallery {
     display: flex;
     /* width: 900px; */
@@ -136,7 +138,7 @@ section.gallery img:hover {
     filter: contrast(120%);
 }
 
-/* * Galeria Cards */
+/* * ///////////////////////////////////////////////////// Gallery Cards ///////////////////////////////////////////////////////// */
 
 main {
   display: flex;
@@ -225,8 +227,65 @@ main {
   vertical-align: middle;
 }
 
+/* Paginado de Galeria */
+#pagination-container {
+  border: 3px solid #f7f7f7;
+  border-radius: 25px;
+  padding: 18px;
+  margin: auto 20%;
+  margin-bottom: 80px;
+  position: relative;
+}
+.explore-more {
+  position: absolute; /* para que se posicione de manera absoluta */
+  top: -15px; /* para que se posicione arriba del borde */
+  left: 50%; /* para que esté en el centro horizontal */
+  transform: translateX(-50%); /* para corregir el centro */
+  padding: 3px 10px; /* para darle espacio al texto */
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: bold;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
 
-/* ? Footer */
+#pagination {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pagination a{
+    text-decoration: none;
+    color: #f7f7f7;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+#pagination a:hover, #pagination a:focus{
+    text-decoration: none;
+    color: #333333;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 5px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+}
+
+.hide {
+   display: none;
+}
+
+/* * ///////////////////////////////////////////////////// End Gallery ///////////////////////////////////////////////////////// */
+
+/* ? //////////////////////////////////////////////////// Start Footer ////////////////////////////////////////////////////////// */
 
 section.footer {
     position: relative;
@@ -348,3 +407,4 @@ footer.bottom .links > a {
         margin-bottom: 2px;
     }
 }
+/* ? //////////////////////////////////////////////////// End Footer ////////////////////////////////////////////////////////// */
