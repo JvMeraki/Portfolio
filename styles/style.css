@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 body {
     margin: 0;
     background: rgb(52,52,52);
@@ -81,7 +82,7 @@ nav .menu-icon {
     color: #333333;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 874px) {
     nav ul {
         display: none;
         flex-direction: column;
@@ -113,6 +114,24 @@ section.content {
     padding: 20px;
     box-sizing: border-box;
 }
+
+section.content h1.h-section {
+    font-size: 30px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+section.content p.p-section {
+    font-size: 22px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+section.content a.a-section {
+	/* color: #ce962e; */
+    color: #7a7a7a;
+	text-decoration: none;
+    font-weight: bold;
+}
+
 /* ? ///////////////////////////////////////////////////////// End Content //////////////////////////////////////////////////////*/
 
 /* * ///////////////////////////////////////////////////// Start Gallery ///////////////////////////////////////////////////////// */
@@ -144,7 +163,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   padding: 50px;
   font-family: 'Roboto', sans-serif;
 }
@@ -159,6 +178,30 @@ main {
   color: var(--color-primary-white);
   box-shadow: 0 10px 30px 5px rgba(84, 84, 84, 0.2);
   margin-bottom: 40px;
+}
+
+@media (max-width: 1300px) {
+    main {
+        flex-direction: column;
+        transition: all 1s ease;
+    }
+}
+
+
+@media (width < 655px) {
+  .card {
+    width: 22rem;
+    height: 28rem;
+    transition: all 0.6s ease-in-out;
+  }
+}
+
+@media (width >= 655px) {
+  .card {
+    width: 28rem;
+    height: 34rem;
+    transition: all 0.6s ease-in-out;
+  }
 }
 
 .card img {
@@ -249,20 +292,25 @@ main {
 }
 
 #load-more-btn:hover {
-    font-size: 25px;
-    position: absolute;
     left: 45%;
-    align-items: center;
-    justify-content: center;
-    bottom: 40px;
-    border: 2px solid;
     border-color: #f7f7f7;
-    border-radius: 25px;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-weight: 500;
     color: #333333;
     background: #f7f7f7;
+}
+@media (width < 600px) {
+    #load-more-btn {
+        bottom: 20px;
+        font-size: 18px;
+        transition: all 0.6s ease;
+        left: 30%;
+    }
+}
+@media (width >= 600px) {
+    #load-more-btn {
+        bottom: 20px;
+        transition: all 0.3s ease;
+        bottom: 40px;
+    }
 }
 
 /* * ///////////////////////////////////////////////////// End Gallery ///////////////////////////////////////////////////////// */
@@ -286,7 +334,7 @@ footer {
     margin: 0 30px;
 }
 
-@media (width < 620px) {
+@media (width < 645px) {
     footer {
         flex-direction: column;
     }
@@ -303,7 +351,7 @@ footer > img {
     border-radius: 50px;
 }
 
-@media (width >= 620px) {
+@media (width >= 640px) {
     footer {
         margin: 0 auto;
         max-width: 600px;
