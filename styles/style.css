@@ -228,60 +228,41 @@ main {
   vertical-align: middle;
 }
 
-/* Paginado de Galeria */
-#pagination-container {
-  border: 3px solid #f7f7f7;
-  border-radius: 25px;
-  padding: 18px;
-  margin: auto 20%;
-  margin-bottom: 80px;
-  position: relative;
+.card:nth-of-type(n+4) {
+  display: none;
 }
-.explore-more {
-  position: absolute; /* para que se posicione de manera absoluta */
-  top: -15px; /* para que se posicione arriba del borde */
-  left: 50%; /* para que esté en el centro horizontal */
-  transform: translateX(-50%); /* para corregir el centro */
-  padding: 3px 10px; /* para darle espacio al texto */
-  font-size: 1.3rem;
-  color: #333333;
-  font-weight: bold;
-  background: #f7f7f7;
-  border-radius: 8px;
-}
-
-#pagination {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#pagination a{
-    text-decoration: none;
-    color: #f7f7f7;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 5px;
-    display: inline-flex;
-    justify-content: center;
+#load-more-btn {
+    font-size: 25px;
+    position: absolute;
+    left: 45%;
     align-items: center;
-    width: 50px;
-    height: 50px;
-}
-#pagination a:hover, #pagination a:focus{
-    text-decoration: none;
-    color: #333333;
-    font-size: 2rem;
-    font-weight: bolder;
-    padding: 5px;
-    background-color: #f7f7f7;
-    border-radius: 50%;
+    justify-content: center;
+    bottom: 40px;
+    border: 2px solid;
+    border-color: #f7f7f7;
+    border-radius: 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #f7f7f7;
+    background: transparent;
 }
 
-.hide {
-   display: none;
+#load-more-btn:hover {
+    font-size: 25px;
+    position: absolute;
+    left: 45%;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
+    border: 2px solid;
+    border-color: #f7f7f7;
+    border-radius: 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333333;
+    background: #f7f7f7;
 }
 
 /* * ///////////////////////////////////////////////////// End Gallery ///////////////////////////////////////////////////////// */

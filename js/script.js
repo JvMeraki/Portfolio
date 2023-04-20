@@ -6,53 +6,18 @@ menuIcon.addEventListener('click', () => {
 	menu.classList.toggle('show');
 });
 
-// Código a implementar Cards
-const cards = document.querySelectorAll('.card');
-const pagination = document.getElementById('pagination');
+// Show more cards
+const CARDS_PER_PAGE = 3;
+const TOTAL_CARDS = document.querySelectorAll('.card').length;
 
-let currentPage = 1;
-let cardsPerPage = 6;
+const loadMoreBtn = document.getElementById('load-more-btn');
+let currentCards = CARDS_PER_PAGE;
 
-function showCards(cards, page, cardsPerPage) {
-   for (let i = 0; i < cards.length; i++) {
-      cards[i].classList.add('hide');
-      if (i >= (page * cardsPerPage) - cardsPerPage && i < page * cardsPerPage) {
-         cards[i].classList.remove('hide');
-      }
-   }
-}
-
-function createPagination(cards, cardsPerPage) {
-   let pages = Math.ceil(cards.length / cardsPerPage);
-   for (let i = 1; i <= pages; i++) {
-      let li = document.createElement('li');
-      let a = document.createElement('a');
-      a.href = '#';
-      a.innerHTML = i;
-      li.appendChild(a);
-      pagination.appendChild(li);
-
-      a.addEventListener('click', function() {
-         currentPage = i;
-         showCards(cards, currentPage, cardsPerPage);
-      });
-   }
-
-   let li = document.createElement('li');
-   let a = document.createElement('a');
-   a.href = '#';
-   a.innerHTML = '>';
-   li.appendChild(a);
-   pagination.appendChild(li);
-
-   a.addEventListener('click', function() {
-      if (currentPage < pages) {
-         currentPage++;
-         showCards(cards, currentPage, cardsPerPage);
-      }
-   });
-
-   showCards(cards, currentPage, cardsPerPage);
-}
-
-createPagination(cards, cardsPerPage);
+loadMoreBtn.addEventListener('click', () => {
+  const cardsToShow = document.querySelectorAll(`.card:nth-of-type(n+${currentCards + 1}):nth-of-type(-n+${currentCards + CARDS_PER_PAGE})`);
+  cardsToShow.forEach(card => card.style.display = 'block');
+  currentCards += CARDS_PER_PAGE;
+  if (currentCards >= TOTAL_CARDS) {
+    loadMoreBtn.style.display = 'none';
+  }
+});
