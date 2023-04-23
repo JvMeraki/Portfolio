@@ -11,7 +11,6 @@ class NavBar extends HTMLElement {
                     <li><a href="#">Inicio</a></li>
                     <li><a href="pages/Gallery.html">Galería</a></li>
                     <li><a href="pages/About.html">Sobre mi</a></li>
-                    <li><a href="#">Contacto</a></li>
                 </ul>
             </nav> 
         </header>
@@ -50,10 +49,9 @@ class Footer extends HTMLElement {
                 <a> Javi </a>
             </div>
             <div class="links">
-                <a href="https://www.instagram.com/jv_meraki/" class="fa-brands fa-instagram"></a>
-                <a href="https://www.linkedin.com/in/brayan-javier-martinez-pinzon-050b51218/"
-                    class="fa-brands fa-linkedin"></a>
-                <a href="https://github.com/" class="fa-brands fa-github-alt"></a>
+                <a href="https://www.instagram.com/jv_meraki/" target="_blank"  class="fa-brands fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/brayan-javier-martinez-pinzon-050b51218/" target="_blank" class="fa-brands fa-linkedin"></a>
+                <a href="https://github.com/" target="_blank"  class="fa-brands fa-github-alt"></a>
             </div>
         </footer>
       </section>
@@ -74,7 +72,6 @@ class NavBarPages extends HTMLElement {
                     <li><a href="../Inicio.html">Inicio</a></li>
                     <li><a href="../pages/Gallery.html">Galería</a></li>
                     <li><a href="../pages/About.html">Sobre mi</a></li>
-                    <li><a href="../pages/Contact.html">Contacto</a></li>
                 </ul>
             </nav> 
         </header>
@@ -113,10 +110,9 @@ class FooterPages extends HTMLElement {
                 <a> Javi </a>
             </div>
             <div class="links">
-                <a href="https://www.instagram.com/jv_meraki/" class="fa-brands fa-instagram"></a>
-                <a href="https://www.linkedin.com/in/brayan-javier-martinez-pinzon-050b51218/"
-                    class="fa-brands fa-linkedin"></a>
-                <a href="https://github.com/" class="fa-brands fa-github-alt"></a>
+                <a href="https://www.instagram.com/jv_meraki/"  target="_blank" class="fa-brands fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/brayan-javier-martinez-pinzon-050b51218/" target="_blank" class="fa-brands fa-linkedin"></a>
+                <a href="https://github.com/" target="_blank"  class="fa-brands fa-github-alt"></a>
             </div>
         </footer>
       </section>
