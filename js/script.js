@@ -2,9 +2,22 @@
 const menuIcon = document.querySelector('.menu-icon');
 const menu = document.querySelector('nav ul');
 
-menuIcon.addEventListener('click', () => {
-	menu.classList.toggle('show');
-});
+function toggleMenu() {
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+}
+
+function resetMenu() {
+  if (window.innerWidth <= 874) {
+    menuIcon.addEventListener('click', toggleMenu);
+  } else {
+    menuIcon.removeEventListener('click', toggleMenu);
+    menu.style.display = '';
+  }
+}
+
+resetMenu();
+window.addEventListener('resize', resetMenu);
+
 
 // Pantalla principal
 let name = 'Javi...';
