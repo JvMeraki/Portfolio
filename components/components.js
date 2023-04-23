@@ -69,7 +69,7 @@ class NavBarPages extends HTMLElement {
                 <h1><i class="fa-solid fa-pencil"></i> Portafolio Jv_Meraki</h1>
                 <i class="fas fa-bars menu-icon"></i>
                 <ul class="menu-uno">
-                    <li><a href="../Inicio.html">Inicio</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../pages/Gallery.html">Galería</a></li>
                     <li><a href="../pages/About.html">Sobre mi</a></li>
                 </ul>
