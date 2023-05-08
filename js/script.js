@@ -1,48 +1,46 @@
 // Desplegar navbar de menu hamburguesa
-const menuIcon = document.querySelector('.menu-icon');
-const menu = document.querySelector('nav ul');
+const menuIcon = document.querySelector(".menu-icon");
+const menu = document.querySelector("nav ul");
 
 function toggleMenu() {
-  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+  menu.style.display = menu.style.display === "none" ? "block" : "none";
 }
 
 function resetMenu() {
   if (window.innerWidth <= 874) {
-    menuIcon.addEventListener('click', toggleMenu);
+    menuIcon.addEventListener("click", toggleMenu);
   } else {
-    menuIcon.removeEventListener('click', toggleMenu);
-    menu.style.display = '';
+    menuIcon.removeEventListener("click", toggleMenu);
+    menu.style.display = "";
   }
 }
 
 resetMenu();
-window.addEventListener('resize', resetMenu);
-
+window.addEventListener("resize", resetMenu);
 
 // Pantalla principal
-let name = 'Javi...';
+let name = "Javi...";
 const nameColors = {
-    'Jv_meraki': '#e6a733',
-    'Javi...': '#e6a733'
+  Jv_meraki: "#e6a733",
+  "Javi...": "#e6a733",
 };
 
 setInterval(() => {
-    if (name === 'Jv_meraki') {
-        name = 'Javi...';
-    } else {
-        name = 'Jv_meraki';
-    }
-    document.querySelector('.title2').style.color = nameColors[name];
-    document.querySelector('.title2').textContent = name;
-    document.querySelector('.name-title').textContent = name;
+  if (name === "Jv_meraki") {
+    name = "Javi...";
+  } else {
+    name = "Jv_meraki";
+  }
+  document.querySelector(".title2").style.color = nameColors[name];
+  document.querySelector(".title2").textContent = name;
+  document.querySelector(".name-title").textContent = name;
 }, 3000);
-
 
 // Show more cards
 const CARDS_PER_PAGE = 6;
-const TOTAL_CARDS = document.querySelectorAll('.card').length;
+const TOTAL_CARDS = document.querySelectorAll(".card").length;
 
-const loadMoreBtn = document.getElementById('load-more-btn');
+const loadMoreBtn = document.getElementById("load-more-btn");
 // let currentCards = CARDS_PER_PAGE;
 let currentCards = 3;
 
@@ -51,11 +49,15 @@ let currentCards = 3;
 // cardsToShow.forEach(card => card.style.display = 'inline-block');
 // currentCards += CARDS_PER_PAGE;
 
-loadMoreBtn.addEventListener('click', () => {
-  const cardsToShow = document.querySelectorAll(`.card:nth-of-type(n+${currentCards + 1}):nth-of-type(-n+${currentCards + CARDS_PER_PAGE})`);
-  cardsToShow.forEach(card => card.style.display = 'inline-block');
+loadMoreBtn.addEventListener("click", () => {
+  const cardsToShow = document.querySelectorAll(
+    `.card:nth-of-type(n+${currentCards + 1}):nth-of-type(-n+${
+      currentCards + CARDS_PER_PAGE
+    })`
+  );
+  cardsToShow.forEach((card) => (card.style.display = "inline-block"));
   currentCards += CARDS_PER_PAGE;
   if (currentCards >= TOTAL_CARDS) {
-    loadMoreBtn.style.display = 'none';
+    loadMoreBtn.style.display = "none";
   }
 });
